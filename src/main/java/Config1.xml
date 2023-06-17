@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="mycollege" class="com.ty.College">
+    <property name="id" value="101"></property>
+    <property name="name" value="GIT"></property>
+        <property name="website" value="www.git.com"></property>
+        <property name="location" value="Belgaum"></property>
+        <property name="phno" value="9845859756"></property>
+        <property name="branch" ref="mybranch"></property>
+        <property name="student" ref="mystudent"></property>
+    
+     </bean>
+     
+     <bean id="mybranch" class="com.ty.Branch">
+     <property name="id" value="1"></property>
+     <property name="branchname" value="civil"></property>
+     <property name="noplaces" value="2"></property>
+     <property name="trainer" value="5"></property>
+     <property name="students" ref="mystudent"></property>
+     </bean>
+     
+     <bean id="mystudent" class="com.ty.Student">
+     <property name="id" value="1"></property>
+          <property name="name" value="prabhu"></property>
+          <property name="gender" value="Male"></property>
+          <property name="phno" value="9845859741"></property>
+          <property name="marks" value="65.23"></property>
+     
+      </bean>
+    
+	
+
+</beans>
